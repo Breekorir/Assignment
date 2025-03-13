@@ -32,6 +32,7 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
 }
 
 nav ul li {
@@ -40,7 +41,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color:black;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -57,6 +58,13 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+.ind {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
 /* Hero Section */
 .hero {
     position: relative;
@@ -194,8 +202,8 @@ nav ul li a:hover {
 .delivery-option {
     color: #666;
 }
-
-/* Footer */
+/* */
+Footer
 footer {
     background-color: #333;
     color: white;
@@ -225,7 +233,7 @@ footer {
 }
 
 .social-media ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -235,20 +243,17 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background-color: white;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    header{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        
     }
 
     nav ul.active {
-        display: flex;
+        display: block;
+        flex-direction: column;
     }
 
     nav ul li {
@@ -258,7 +263,9 @@ footer {
     .inc {
         display: block;
     }
-
+.ind{
+    display: block;
+}
     .hero-text h2 {
         font-size: 1.8rem;
     }
@@ -266,4 +273,20 @@ footer {
     .hero-text p {
         font-size: 1rem;
     }
+}
+.menu {
+    display: block;
+}
+
+header nav {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 143, 0, 0);
+    display: none;/*hiding nav by default --use js to bring back*/
+    gap: 30px;
+    padding: 40px;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 25px;
 }
